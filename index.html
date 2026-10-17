@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An educational digital museum exploring Earth's ancient life, fossils, evolution, and human origins.">
+  <title>Prehistoric World — Digital Museum</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><span class="brand-mark">◈</span> PREHISTORIC <b>WORLD</b></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav id="nav">
+    <a href="#explore">Explore</a><a href="#timeline">Timeline</a><a href="#humans">Human origins</a>
+    <a href="#fossils">Fossils</a><a href="#museum">3D museum</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">A DIGITAL MUSEUM OF ANCIENT LIFE</p>
+    <h1>Before us,<br><em>another world.</em></h1>
+    <p class="hero-copy">Journey through 4.5 billion years of Earth's history—from the first simple life to dinosaurs, ancient forests, Ice Age giants, and the evolution of humans.</p>
+    <div class="hero-actions"><a class="button primary" href="#explore">Explore the archive ↘</a><a class="button ghost" href="#timeline">Travel through time</a></div>
+    <p class="hero-note">SCIENCE • FOSSILS • EVOLUTION • DEEP TIME</p>
+  </div>
+  <div class="hero-art" aria-label="Stylized prehistoric landscape illustration">
+    <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+    <div class="fern fern-one">♣</div><div class="fern fern-two">♣</div>
+    <div class="dino-silhouette"><span class="tail"></span><span class="body"></span><span class="neck"></span><span class="head"></span><span class="leg leg-one"></span><span class="leg leg-two"></span></div>
+    <span class="art-caption">LATE CRETACEOUS · 66 MILLION YEARS AGO</span>
+  </div>
+</section>
+
+<section class="stats" aria-label="Museum overview">
+  <div><strong>4.54B</strong><span>years of Earth history</span></div>
+  <div><strong>3.5B+</strong><span>years of evidence for life</span></div>
+  <div><strong>66M</strong><span>years since non-avian dinosaurs vanished</span></div>
+  <div><strong>1</strong><span>living human species</span></div>
+</section>
+
+<section class="section" id="explore">
+  <div class="section-heading"><div><p class="eyebrow">THE COLLECTION</p><h2>Explore ancient life</h2></div><p>Search the collection or choose a field of discovery. These entries are a starting encyclopedia, designed to expand as you add more species and research.</p></div>
+  <div class="search-row"><label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search species, eras, fossils..." aria-label="Search encyclopedia"></label>
+  <select id="categoryFilter" aria-label="Filter by category"><option value="all">All categories</option><option value="dinosaur">Dinosaurs</option><option value="plant">Plants</option><option value="creature">Other creatures</option><option value="human">Human evolution</option><option value="fossil">Fossils & science</option></select></div>
+  <div id="entryGrid" class="entry-grid"></div>
+  <p id="emptyState" class="empty-state" hidden>No entries match that search. Try another word or category.</p>
+</section>
+
+<section class="timeline-section" id="timeline">
+  <div class="section-heading"><div><p class="eyebrow">A PLANET IN MOTION</p><h2>Timeline of deep time</h2></div><p>Dates are approximate. Geological boundaries are refined as new evidence is found.</p></div>
+  <div class="timeline">
+    <article><span class="time-dot"></span><p class="time">4.54 billion years ago</p><h3>Earth forms</h3><p>Earth accretes from material orbiting the young Sun. The planet heats, differentiates into layers, and gradually develops a crust and oceans.</p></article>
+    <article><span class="time-dot"></span><p class="time">At least 3.5 billion years ago</p><h3>Early life</h3><p>Microbial life is present. The earliest organisms were simple and did not resemble plants or animals. Their history is reconstructed from fossils, chemistry, and ancient rocks.</p></article>
+    <article><span class="time-dot"></span><p class="time">About 541 million years ago</p><h3>Cambrian diversification</h3><p>Many animal groups become conspicuous in the fossil record. This was not the instant origin of all life; evolution had already been happening for billions of years.</p></article>
+    <article><span class="time-dot"></span><p class="time">About 230 million years ago</p><h3>First dinosaurs</h3><p>Dinosaurs appear in the Triassic. They were initially one part of a diverse ecosystem and later became dominant land animals in many environments.</p></article>
+    <article><span class="time-dot"></span><p class="time">About 150 million years ago</p><h3>Birds take flight</h3><p>Early birds evolve from theropod dinosaurs. Birds are living dinosaurs, so the dinosaur lineage did not disappear completely.</p></article>
+    <article><span class="time-dot"></span><p class="time">66 million years ago</p><h3>K–Pg mass extinction</h3><p>A large asteroid impact contributed to a global environmental crisis. All non-avian dinosaurs went extinct, while birds and many other groups survived.</p></article>
+    <article><span class="time-dot"></span><p class="time">About 300,000 years ago</p><h3>Homo sapiens</h3><p>Our species evolves in Africa. Human evolution is branching, not a straight ladder, and our species later spreads across the world.</p></article>
+  </div>
+</section>
+
+<section class="feature-section" id="humans">
+  <div class="feature-art human-art"><span class="orbit"></span><span class="human-symbol">◉</span><span class="human-caption">A BRANCHING FAMILY TREE</span></div>
+  <div class="feature-copy"><p class="eyebrow">OUR OWN DEEP PAST</p><h2>Human evolution is a story of branches.</h2>
+    <p>Humans did not evolve from the monkeys alive today. Humans and other living primates share common ancestors. Over millions of years, populations changed and split into different lineages.</p>
+    <h3>Important chapters</h3>
+    <ul class="fact-list">
+      <li><b>Early hominins:</b> fossils show several species with different combinations of upright walking, climbing, and other traits.</li>
+      <li><b>Australopithecus:</b> African hominins that walked upright but retained many climbing adaptations.</li>
+      <li><b>Homo erectus:</b> a widespread human relative with body proportions suited to long-distance walking; some populations expanded beyond Africa.</li>
+      <li><b>Neanderthals and Denisovans:</b> close relatives of modern humans. DNA shows that some ancestors of people today interbred with these groups.</li>
+      <li><b>Homo sapiens:</b> our species, with the oldest widely accepted fossils dating to roughly 300,000 years ago in Africa.</li>
+    </ul>
+    <p class="small-note">Evolution has no predetermined goal. Traits become more or less common through processes such as natural selection, genetic drift, mutation, and migration.</p>
+  </div>
+</section>
+
+<section class="section two-column" id="fossils">
+  <div><p class="eyebrow">FROM ROCK TO DISCOVERY</p><h2>How fossils become evidence</h2>
+    <p>Fossils preserve traces of past life. Bones, teeth, shells, pollen, footprints, burrows, and even chemical signals can reveal ancient ecosystems. Most organisms never fossilize, so the record is incomplete.</p>
+    <div class="steps">
+      <article><span>01</span><div><h3>Burial</h3><p>Rapid burial by mud, sand, ash, or other sediment can protect remains from scavengers and weathering.</p></div></article>
+      <article><span>02</span><div><h3>Preservation</h3><p>Minerals may fill pores or replace original material. Pressure and chemistry gradually turn sediment into rock.</p></div></article>
+      <article><span>03</span><div><h3>Exposure</h3><p>Uplift and erosion can expose fossil-bearing rock at the surface. Field teams map the location and geological layer.</p></div></article>
+      <article><span>04</span><div><h3>Study and dating</h3><p>Scientists document, carefully excavate, compare anatomy, and use stratigraphy and suitable radiometric methods to estimate ages.</p></div></article>
+    </div>
+  </div>
+  <aside class="fact-panel"><p class="eyebrow">HOW SCIENCE KNOWS</p><h3>Evidence works together</h3><p>A fossil's age is not usually read directly from the fossil itself. Researchers combine rock layers, volcanic ash dates when available, anatomical comparisons, geochemistry, and other evidence.</p><hr><h3>What can fossils tell us?</h3><ul><li>Body shape, growth, and injuries</li><li>Diet clues from teeth and stomach contents</li><li>Movement from trackways</li><li>Ancient climates and environments</li><li>Evolutionary relationships—often with uncertainty</li></ul><p class="small-note">Scientific explanations can change when new fossils or better analyses become available.</p></aside>
+</section>
+
+<section class="museum-section" id="museum">
+  <div class="section-heading"><div><p class="eyebrow">INTERACTIVE COLLECTION</p><h2>The 3D museum</h2></div><p>Load a legally reusable GLB or glTF model URL to rotate and inspect it. The website does not automatically include every 3D model; each asset must be sourced and added.</p></div>
+  <div class="viewer-layout">
+    <div class="viewer-frame">
+      <model-viewer id="modelViewer" alt="Interactive 3D model" camera-controls auto-rotate shadow-intensity="1" exposure="1" environment-image="neutral">
+        <div slot="poster" class="viewer-placeholder"><span>◇</span><b>Your next discovery</b><small>Paste a 3D model URL in the panel</small></div>
+        <div slot="error" class="viewer-placeholder"><b>Model could not load</b><small>Check the URL, file format, and hosting permissions.</small></div>
+      </model-viewer>
+    </div>
+    <form id="modelForm" class="model-form">
+      <p class="eyebrow">MODEL LOADER</p><h3>Bring a specimen into view</h3>
+      <label for="modelUrl">Public model URL (.glb or .gltf)</label><input id="modelUrl" type="url" placeholder="https://example.com/model.glb" required>
+      <label for="modelName">Specimen name</label><input id="modelName" type="text" placeholder="e.g. Triceratops skull">
+      <button class="button primary" type="submit">Load 3D model ↗</button>
+      <p class="small-note">Use a direct file URL from a host that permits embedding and cross-origin access. Keep a record of the creator, license, and source in your entry.</p>
+      <div class="model-tips"><b>Supported:</b> GLB and glTF<br><b>Controls:</b> drag to rotate, scroll to zoom<br><b>Mobile:</b> touch to rotate and pinch to zoom</div>
+    </form>
+  </div>
+</section>
+
+<section class="sources-section">
+  <p class="eyebrow">KEEP LEARNING</p><h2>Build the archive responsibly.</h2>
+  <p>This is an educational starting point, not a complete catalogue of all extinct life. No one knows every species that ever lived; many remain undiscovered or are known from incomplete fossils. Check claims against museums, universities, and peer-reviewed research.</p>
+  <div class="source-links"><a href="https://www.nhm.ac.uk/" target="_blank" rel="noopener">Natural History Museum ↗</a><a href="https://www.si.edu/" target="_blank" rel="noopener">Smithsonian Institution ↗</a><a href="https://www.nps.gov/subjects/fossils/index.htm" target="_blank" rel="noopener">U.S. National Park Service: Fossils ↗</a><a href="https://humanorigins.si.edu/" target="_blank" rel="noopener">Smithsonian Human Origins ↗</a></div>
+</section>
+</main>
+<footer><a class="brand" href="#home">◈ PREHISTORIC <b>WORLD</b></a><span>Made for curious minds · Keep exploring Earth's story.</span><a href="#home">Back to top ↑</a></footer>
+<script src="script.js"></script>
+</body>
+</html>
